@@ -28,10 +28,5 @@ class formularioController{
         
         header("location:./");
     }
-
-
-
-   
-
-
+    
 }
