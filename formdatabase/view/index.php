@@ -1,18 +1,22 @@
-<?php
-require_once("layouts/header.php");
-?>
-<a href="index.php?m=nuevo" class="btn">NUEVO</a>
+<?php require_once("layouts/header.php"); ?>
+
+<a href="index.php?m=nuevo" class="btn btn-new">Nuevos datos</a>
+
+
+<br>
+
 <table class="container" border="1">
     <tr>
         <td>ID</td>
-        <td>NOMBRE</td>
-        <td>APELLIDO</td>
-        <td>TELEFONO</td>
-        <td>DIRECCION</td>
-        <td>EMAIL</td>
-        <td>USUARIO</td>
-        <td>ACCIÓN</td>        
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Telefono</td>
+        <td>Dirección</td>
+        <td>Email</td>
+        <td>Usuario</td>
+        <td>Acción</td>        
     </tr>
+    
     <tbody>
         <?php
             if(!empty($dato)):
@@ -27,8 +31,8 @@ require_once("layouts/header.php");
                         <td><?php echo $v['email'] ?> </td>
                         <td><?php echo $v['usuario'] ?> </td>
                         <td>
-                            <a class="btn" href="index.php?m=editar&id=<?php echo $v['estudiante_id']?>">EDITAR</a>
-                            <a class="btn" href="index.php?m=eliminar&id=<?php echo $v['estudiante_id']?>" onclick="return confirm('ESTA SEGURO'); false">ELIMINAR</a>
+                            <a class="btn" href="index.php?m=editar&id=<?php echo $v['estudiante_id']?>">Editar datos</a>
+                            <a href="index.php?m=eliminar&id=<?php echo $v['estudiante_id']?>" class="btn btn-delete" onclick="return confirm('¿Está seguro que desea eliminar estos datos?');">Eliminar datos</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
@@ -39,5 +43,5 @@ require_once("layouts/header.php");
             <?php endif ?>
     </tbody>
 </table>
-<?php
-require_once("layouts/footer.php");
+
+<?php require_once("layouts/footer.php"); ?>
