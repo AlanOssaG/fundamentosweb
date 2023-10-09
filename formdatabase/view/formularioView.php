@@ -49,7 +49,7 @@
         </div>
 
         <div class="button-container">
-            <button type="submit" name="m" value="guardar">GUARDAR</button>
+            <button type="submit" name="m" value="guardar">Guardar</button>
         </div>
         <div class="contact-info">
 
