@@ -9,16 +9,21 @@ class modeloController{
         $this->model = new Modelo();
         $this->formulario = new Formulario();
     }
+
+
     // mostrar
     static function index(){
         $producto   = new Modelo();
         $dato       =   $producto->mostrar("estudiante","1");
         require_once("view/index.php");
     }
+
+    
         //nuevo
         static function nuevo(){        
             require_once("view/formularioView.php");
         }
+        
         //guardar
         static function guardar(){
         
@@ -39,8 +44,6 @@ class modeloController{
             header("location:./");
         }
     
-    
-    
         //editar
         static function editar(){    
             $id = $_REQUEST['id'];
@@ -48,6 +51,7 @@ class modeloController{
             $dato = $producto->mostrar("estudiante","estudiante_id=".$id);        
             require_once("view/editar.php");
         }
+        
         //actualizar
         static function actualizar(){
             $id = $_REQUEST['id'];
